@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+    <component-scan base-package="org.example.mvclearning">
+
+    </component-scan>
+
+    <bean class ="org.example.mvclearning.MyViewResolver">
+        <property name="prefix" value="/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+</beans>
