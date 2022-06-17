@@ -2,6 +2,6 @@
 
 1. 提供@MyController、@MyRequestMapping注解，供予扫描，交给ioc容器管理。这里额外提一句，需要将类与方法的映射关系一并存储，这里使用类ObjectRelation。
 2. 实现简单的视图解析器MyViewResolver，可以对页面名进行补全（通过prefix和suffix两个字符串简单实现
-3. 核心类在于myDispactherServlet，其主要逻辑在于先找到标注@MyController注解的类，并找出类中标注@MyRequestMapping注解的方法，并将这些东西一并交给ioc容器管理，然后就是对浏览器请求作出响应，根据uri可以找到对应后端需要调用的方法
+3. 核心类在于MyDispactherServlet，其主要逻辑在于先找到标注@MyController注解的类，并找出类中标注@MyRequestMapping注解的方法，并将这些东西一并交给ioc容器管理，然后就是对浏览器请求作出响应，根据uri可以找到对应后端需要调用的方法
 4. 这里ioc容器只是简单的通过map实现，键为url，值为controller类-requestMapping方法组成的ObjectRelation对象
 
