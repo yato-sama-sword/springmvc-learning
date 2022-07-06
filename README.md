@@ -1,6 +1,20 @@
 **注：进行简单的模拟而非详尽的实现**
 
-**SpringMVC的工作流程**
+## Spring MVC
+
+### 什么是MVC
+
+>model-view-controller，是一种软件设计规范，本质上是一种解耦，其中：
+>
+>1. Model是应用程序中用于处理应用程序数据逻辑的部分
+>2. View是应用程序中处理数据显示的部分，一般需要依据模型数据创建
+>3. Controller是应用程序中处理用户交互的部分，通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据
+
+### 什么是Spring MVC
+
+>是遵从MVC规范开发出的Web框架
+
+### Spring MVC请求流程
 
 1. 发起Http请求：客户端直接向DispatcherServlet发起请求
 2. 寻找处理器：DispatcherServlet调用HandlerMapping，解析请求，找到对应的Handler
